@@ -2,6 +2,7 @@ import  UseStateHook  from './hooksTutorial/UseStateHook'
 import  UseEffectHook  from './hooksTutorial/UseEffectHook'
 import  UseContextHook  from './hooksTutorial/UseContextHook'
 import  UseReducerHook  from './hooksTutorial/useReducerHook'
+import UseContextUseReducerHook   from './hooksTutorial/UseContextUseReducerHook'
 import './index.css'
 import { useState } from 'react';
 
@@ -15,15 +16,18 @@ function App() {
      <button className='button'  onClick={()=>setDisplayHook('useEffect')}> useEffect </button> 
      <button className='button'  onClick={()=>setDisplayHook('useContext')}> useContext </button>
      <button className='button'  onClick={()=>setDisplayHook('useReducer')}> useReducer </button> 
+     <button className='button'  onClick={()=>setDisplayHook('useContextUseReducer')}> useContext-useReducer </button> 
+     
      {displayHook==='useState'?
-     <UseStateHook />:null}
-      
+     <UseStateHook />:null} 
      {displayHook==='useEffect'?
      <UseEffectHook />:null}
      {displayHook==='useContext'?
      <UseContextHook />:null}
      {displayHook==='useReducer'?
      <UseReducerHook />:null}
+     {displayHook==='useContextUseReducer'?
+     <UseContextUseReducerHook />:null}
      
     </div>
   );

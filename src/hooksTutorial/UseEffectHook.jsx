@@ -42,6 +42,7 @@ function UseStateHook (){
             <h5>
                 Understanding the <code>useEffect</code> Hook
             </h5>
+            <p>Please open console, as we have logged data in console</p>
             Button Clicked: {count} times
             <div>
                 <button onClick={()=>setCount((prevVal)=>{return prevVal+1})}>+</button>
