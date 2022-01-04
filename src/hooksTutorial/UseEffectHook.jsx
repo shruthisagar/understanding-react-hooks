@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../index.css'
 
 function UseStateHook (){
@@ -7,12 +7,40 @@ function UseStateHook (){
         name:'devopedia',
         age: 4
     })
+    // useEffect(()=>{
+    //     console.log("useEffect being called.");
+
+    //     return () =>{
+    //         console.log('clean up function')
+    //     }
+    // },[])
+
+    // Update when a specific value is only updated -> count here for example
+
+    useEffect(()=>{
+        console.log("useEffect being called.");
+        console.log(count)
+        return () =>{
+            console.log('clean up function')
+        }
+    },[count])
+    
+    
+    // Call every time component is rendered
+
+    // useEffect(()=>{
+    //     console.log("useEffect being called.");
+
+    //     return () =>{
+    //         console.log('clean up function')
+    //     }
+    // })
     return (
         <>
         <div className='container'>
             <div className='execution'>
             <h5>
-                Understanding the <code>useState</code> Hook
+                Understanding the <code>useEffect</code> Hook
             </h5>
             Button Clicked: {count} times
             <div>
