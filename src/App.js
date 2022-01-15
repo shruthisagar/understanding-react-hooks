@@ -7,6 +7,7 @@ import UseRefHook from './hooksTutorial/UseRefHook'
 import UseMemoHook from './hooksTutorial/UseMemoHook'
 import UseCallbackHook from './hooksTutorial/UseCallbackHook'
 import './index.css'
+import ClassCompoent from './hooksTutorial/classComponent'
 import { useState } from 'react';
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
      <button className='button'  onClick={()=>setDisplayHook('useRef')}> useRef </button> 
      <button className='button'  onClick={()=>setDisplayHook('useMemo')}> useMemo </button> 
      <button className='button'  onClick={()=>setDisplayHook('useCallback')}> useCallback </button> 
+     <button className='button'  onClick={()=>setDisplayHook('ClassCompoent')}> ClassCompoent </button> 
+     
      
      {displayHook==='useState'?
      <UseStateHook />:null} 
@@ -40,6 +43,8 @@ function App() {
      <UseMemoHook />:null}
      {displayHook==='useCallback'?
      <UseCallbackHook />:null}
+     {displayHook === 'ClassCompoent'?
+     <ClassCompoent />:null }
      
      
      
